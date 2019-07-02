@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.lblLanguage.text = "Your Selected : English"
+        self.lblLanguage.text = "Selected language: English"
         UserDefaults.standard.set("en", forKey: "i18n_language")
         self.setUpLabel()
         
@@ -33,19 +33,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btTamil(_: Any){
-        self.lblLanguage.text = "Your Selected : Tamil"
+        self.lblLanguage.text = "Selected language: Tamil"
         UserDefaults.standard.set("ta", forKey: "i18n_language")
         self.setUpLabel()
     }
     
     @IBAction func btEnglish(_: Any){
-        self.lblLanguage.text = "Your Selected : English"
+        self.lblLanguage.text = "Selected language: English"
         UserDefaults.standard.set("en", forKey: "i18n_language")
         self.setUpLabel()
     }
     
     @IBAction func btDutch(_: Any){
-        self.lblLanguage.text = "Your Selected : Dutch"
+        self.lblLanguage.text = "Selected language: Dutch"
         UserDefaults.standard.set("nl", forKey: "i18n_language")
         self.setUpLabel()
     }
