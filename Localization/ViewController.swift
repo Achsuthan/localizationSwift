@@ -13,10 +13,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var btTamil: UIButton!
     @IBOutlet weak var btEnglish: UIButton!
     @IBOutlet weak var btDutch: UIButton!
+    @IBOutlet weak var lblLanguage: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.lblLanguage.text = "Your Selected : English"
         UserDefaults.standard.set("en", forKey: "i18n_language")
         self.setUpLabel()
         
@@ -32,16 +33,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btTamil(_: Any){
+        self.lblLanguage.text = "Your Selected : Tamil"
         UserDefaults.standard.set("ta", forKey: "i18n_language")
         self.setUpLabel()
     }
     
     @IBAction func btEnglish(_: Any){
+        self.lblLanguage.text = "Your Selected : English"
         UserDefaults.standard.set("en", forKey: "i18n_language")
         self.setUpLabel()
     }
     
     @IBAction func btDutch(_: Any){
+        self.lblLanguage.text = "Your Selected : Dutch"
         UserDefaults.standard.set("nl", forKey: "i18n_language")
         self.setUpLabel()
     }
